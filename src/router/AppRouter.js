@@ -9,14 +9,12 @@ class AppRouter extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="main">
           <Switch>
             <Route path="/" component={Home} exact={true} />
             <Route path="/redirect" component={RedirectPage} />
             <Route path="/main" component={Main} />
             <Route component={NotFoundPage} />
           </Switch>
-        </div>
       </BrowserRouter>
     );
   }
