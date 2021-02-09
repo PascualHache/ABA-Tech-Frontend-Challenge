@@ -7,9 +7,10 @@ const Home = (props) => {
     const { authUrl, clientId, redirectUrl } = config.api;
 
     const handleLogin = () => {
-        window.location = `${authUrl}?client_id=${clientId}
-        &redirect_uri=${redirectUrl}
-        &response_type=token&show_dialog=true`;
+         let url=`${authUrl}?client_id=${clientId}`
+         url+=`&redirect_uri=${redirectUrl}`
+         url+=`&response_type=token&show_dialog=true`;
+         window.location = url;
     };
 
     return (
