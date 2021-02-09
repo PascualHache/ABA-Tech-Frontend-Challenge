@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import { connect } from 'react-redux';
 import config from '../config';
 
 const Home = (props) => {
@@ -15,7 +15,6 @@ const Home = (props) => {
 
     return (
         <div className="login">
-            <Header />
             <button type="submit" onClick={handleLogin}>
                 Login to spotify
             </button>
@@ -23,4 +22,4 @@ const Home = (props) => {
     );
 };
 
-export default (Home);
+export default connect()(Home);
