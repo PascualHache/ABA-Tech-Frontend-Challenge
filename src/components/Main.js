@@ -1,38 +1,48 @@
 import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import Header from './Header';
-import { useDispatch } from "react-redux";
+import SideMenu from './SideMenu';
+import Player from './Player';
+import CoversCarousel from './content/CoversCarousel';
 import { getNewReleases, getFeaturedPlaylists, getCategories } from './../actions/result';
 
-const Main = () => {
-
-    const dispatch = useDispatch();
+const Main = (props) => {
 
     useEffect(() => {
-        dispatch(getNewReleases())
-        dispatch(getFeaturedPlaylists())
-        dispatch(getCategories())
+        props.fetchReleases();
+        props.fetchFeatured();
+        props.fetchCategories();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-
-    const handleNewReleases = () => {
-        dispatch(getNewReleases())
-    }
-
-    const handleFeatured = () => {
-        dispatch(getFeaturedPlaylists())
-    }
-
-    const handleCategories = () => {
-        dispatch(getCategories())
-    }
-
     return (
-        <>
-            <Header />
-            <div >Main Page</div>
-            <div onClick={handleNewReleases}>New Releases</div>
-            <div onClick={handleFeatured}>Featured Playlists</div>
-            <div onClick={handleCategories}>Categories</div>
-        </>)
+        <div className="main">
+            <SideMenu />
+            <div className="rightSide">
+                <Header />
+                <div className="content-view">
+                    <CoversCarousel data={props.newReleases?.albums?.items} title="RELEASED THIS WEEK" type={"releases"} />
+                    <CoversCarousel data={props.featuredPlaylists?.playlists?.items} title="FEATURED PLAYLISTS" type={"featured"} />
+                    <CoversCarousel data={props.categories.categories?.items} title="BROWSE" type={"categories"} />
+                </div>
+                <Player track={"Nothing's playing"}/>
+            </div>
+        </div>)
 };
-export default Main;
+
+const mapStateToProps = (state) => {
+    return {
+        newReleases: state.newReleases,
+        featuredPlaylists: state.featuredPlaylists,
+        categories: state.categories
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchReleases: () => dispatch(getNewReleases()),
+        fetchFeatured: () => dispatch(getFeaturedPlaylists()),
+        fetchCategories: () => dispatch(getCategories()),
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

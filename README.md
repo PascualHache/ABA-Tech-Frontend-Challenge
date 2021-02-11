@@ -1,7 +1,7 @@
-# Tech-Frontend-Challenge
+# Tech-Frontend-Challenge Response
 
 # Goals/Outcomes ✨
-- To test knowledge of consuming APIs and handling responses
+- <span style="color:green">To test knowledge of consuming APIs and handling responses</span>
 - Loading state and knowing where and how to make multiple API calls efficiently
 - Link to the source code, use your favorite repository manager (GitHub, GitLab, ...)
 - Link to the deployed Demo, use your favorite static site hosting platform (surge, github-pages, now, ...)
