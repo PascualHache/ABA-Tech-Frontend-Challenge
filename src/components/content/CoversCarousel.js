@@ -6,7 +6,6 @@ import CoverItem from './CoverItem';
 export const Menu = (list, type) => list.map(el => {
   
   const { name, images, icons } = el;
-  console.log("tyyype", images)
   return (
     <CoverItem
       text={name}
@@ -32,8 +31,6 @@ export const CoversCarousel = (props) => {
         arrowRight={<IoIosArrowForward />}
         wheel={false}
         alignCenter={false}
-      // selected={selected}
-      // onSelect={onSelect}
       />
     </div>
   );

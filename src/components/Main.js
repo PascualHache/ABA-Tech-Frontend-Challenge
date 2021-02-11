@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Header from './Header';
 import SideMenu from './SideMenu';
+import Player from './Player';
 import CoversCarousel from './content/CoversCarousel';
-import { useDispatch } from "react-redux";
 import { getNewReleases, getFeaturedPlaylists, getCategories } from './../actions/result';
 
 const Main = (props) => {
@@ -12,6 +12,7 @@ const Main = (props) => {
         props.fetchReleases();
         props.fetchFeatured();
         props.fetchCategories();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -24,6 +25,7 @@ const Main = (props) => {
                     <CoversCarousel data={props.featuredPlaylists?.playlists?.items} title="FEATURED PLAYLISTS" type={"featured"} />
                     <CoversCarousel data={props.categories.categories?.items} title="BROWSE" type={"categories"} />
                 </div>
+                <Player track={"Nothing's playing"}/>
             </div>
         </div>)
 };
