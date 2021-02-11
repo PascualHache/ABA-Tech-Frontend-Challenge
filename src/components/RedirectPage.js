@@ -7,13 +7,13 @@ export default class RedirectPage extends React.Component {
         const { history, location } = this.props;
         try {
             if (_.isEmpty(location.hash)) {
-                return history.push('/Main');
+                return history.push('/main');
             }
             const access_token = getParamValues(location.hash);
             localStorage.setItem('params', JSON.stringify(access_token));
-            history.push('/Main');
+            history.push('/main');
         } catch (error) {
-            history.push('/');
+            history.push('/login');
         }
     }
     render() {
