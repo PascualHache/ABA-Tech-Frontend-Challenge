@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ABA-Tech-Frontend-Challenge/static/css/main.304177f1.chunk.css",
+    "main.js": "/ABA-Tech-Frontend-Challenge/static/js/main.1fb5ca13.chunk.js",
+    "main.js.map": "/ABA-Tech-Frontend-Challenge/static/js/main.1fb5ca13.chunk.js.map",
+    "runtime-main.js": "/ABA-Tech-Frontend-Challenge/static/js/runtime-main.0677043d.js",
+    "runtime-main.js.map": "/ABA-Tech-Frontend-Challenge/static/js/runtime-main.0677043d.js.map",
+    "static/js/2.a367362e.chunk.js": "/ABA-Tech-Frontend-Challenge/static/js/2.a367362e.chunk.js",
+    "static/js/2.a367362e.chunk.js.map": "/ABA-Tech-Frontend-Challenge/static/js/2.a367362e.chunk.js.map",
+    "index.html": "/ABA-Tech-Frontend-Challenge/index.html",
+    "precache-manifest.879325fcb4e37e786c60deff569cc315.js": "/ABA-Tech-Frontend-Challenge/precache-manifest.879325fcb4e37e786c60deff569cc315.js",
+    "service-worker.js": "/ABA-Tech-Frontend-Challenge/service-worker.js",
+    "static/css/main.304177f1.chunk.css.map": "/ABA-Tech-Frontend-Challenge/static/css/main.304177f1.chunk.css.map",
+    "static/js/2.a367362e.chunk.js.LICENSE.txt": "/ABA-Tech-Frontend-Challenge/static/js/2.a367362e.chunk.js.LICENSE.txt",
+    "static/media/avatar.svg": "/ABA-Tech-Frontend-Challenge/static/media/avatar.8d5ea913.svg",
+    "static/media/hero.svg": "/ABA-Tech-Frontend-Challenge/static/media/hero.ee1d2f30.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0677043d.js",
+    "static/js/2.a367362e.chunk.js",
+    "static/css/main.304177f1.chunk.css",
+    "static/js/main.1fb5ca13.chunk.js"
+  ]
+}
