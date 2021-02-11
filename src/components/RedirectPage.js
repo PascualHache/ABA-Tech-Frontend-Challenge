@@ -13,7 +13,7 @@ export default class RedirectPage extends React.Component {
             localStorage.setItem('params', JSON.stringify(access_token));
             history.push('/main');
         } catch (error) {
-            history.push('/login');
+            history.push('/');
         }
     }
     render() {
