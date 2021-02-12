@@ -10,9 +10,9 @@ class AppRouter extends React.Component {
     return (
       <BrowserRouter>
           <Switch>
-            <Route path="/" component={Home} exact={true} />
-            <Route path="/redirect" component={RedirectPage} />
-            <Route path="/main" component={Main} />
+            <Route exact path="/ABA-Tech-Frontend-Challenge/" component={Home}/>
+            <Route exact path="/ABA-Tech-Frontend-Challenge/redirect" component={RedirectPage} />
+            <Route exact path="/ABA-Tech-Frontend-Challenge/main" component={Main} />
             <Route component={NotFoundPage} />
           </Switch>
       </BrowserRouter>
