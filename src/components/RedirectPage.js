@@ -10,6 +10,7 @@ export default class RedirectPage extends React.Component {
                 console.log("empty")
                 return history.push('/Main');
             }
+            console.log("location", location)
             const access_token = getParamValues(location.hash);
             localStorage.setItem('params', JSON.stringify(access_token));
             history.push('/Main');
