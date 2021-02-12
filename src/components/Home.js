@@ -13,6 +13,7 @@ const Home = () => {
         localStorage.setItem('clientID', name)
         handleLogin()
     }
+    console.log("SUper importante",redirectUrl)
     const handleLogin = () => {
         let url = `${authUrl}?client_id=${localStorage.getItem("clientID")}`
         url += `&redirect_uri=${redirectUrl}`

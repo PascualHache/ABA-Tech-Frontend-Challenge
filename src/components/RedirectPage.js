@@ -8,12 +8,12 @@ export default class RedirectPage extends React.Component {
         try {
             if (_.isEmpty(location.hash)) {
                 console.log("empty")
-                return history.push('/ABA-Tech-Frontend-Challenge/Main');
+                return history.push('/ABA-Tech-Frontend-Challenge/Main#');
             }
             console.log("location", location)
             const access_token = getParamValues(location.hash);
             localStorage.setItem('params', JSON.stringify(access_token));
-            history.push('/ABA-Tech-Frontend-Challenge/Main');
+            history.push('/ABA-Tech-Frontend-Challenge/Main#');
         } catch (error) {
             console.log(error)
             history.push('/ABA-Tech-Frontend-Challenge/');
