@@ -4,12 +4,12 @@ import {FaHeadphonesAlt, FaSearch, FaHeart, FaPlayCircle} from 'react-icons/fa';
 import {RiMenu4Line} from 'react-icons/ri';
 
 
-export default function SideMenu() {
+export default function SideMenu({userName}) {
     return (
         <div className="side-menu">
             <div className="avatarBox">
                 <img src={Svg} className="avatar" alt="avatar" />
-                <span>Bob Smith</span>
+                <span>{userName}</span>
             </div>
             <a href="/#" ><FaHeadphonesAlt/><div className="menu-text">Discover</div></a>
             <a href="/#"><FaSearch/><div className="menu-text">Search</div></a>

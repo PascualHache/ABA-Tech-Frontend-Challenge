@@ -17,7 +17,7 @@ const Main = (props) => {
 
     return (
         <div className="main">
-            <SideMenu />
+            <SideMenu userName={"Bob Smith"}/>
             <div className="rightSide">
                 <Header />
                 <div className="content-view">
