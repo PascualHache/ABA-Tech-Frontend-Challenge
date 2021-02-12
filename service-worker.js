@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ABA-Tech-Frontend-Challenge/precache-manifest.726770f522fc68b877249ad0ddd670ca.js"
+  "/ABA-Tech-Frontend-Challenge/precache-manifest.8b6f79fea371f3441cfb33867e3f0800.js"
 );
 
 self.addEventListener('message', (event) => {
