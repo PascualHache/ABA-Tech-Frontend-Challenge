@@ -10,7 +10,7 @@ class AppRouter extends React.Component {
     return (
       <HashRouter>
           <Switch>
-            <Route exact path="/ABA-Tech-Frontend-Challenge/" component={Home}/>
+            <Route exact path="/ABA-Tech-Frontend-Challenge/#/" component={Home}/>
             <Route exact path="/ABA-Tech-Frontend-Challenge/redirect" component={RedirectPage} />
             <Route exact path="/ABA-Tech-Frontend-Challenge/main" component={Main} />
             <Route component={NotFoundPage} />
